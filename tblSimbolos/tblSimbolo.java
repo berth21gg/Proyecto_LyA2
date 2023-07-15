@@ -28,7 +28,6 @@ public class tblSimbolo {
     public simbolo getSimboloToken(String descripcion){
         simbolo sim = null;
         for(int i = 0; i < simbolos.size(); i++){
-            //System.out.println("Simbolos => "+simbolos.get(i).getDescripcion());
             if(simbolos.get(i).getDescripcion().equals(descripcion)){
                 sim = simbolos.get(i);
             }
