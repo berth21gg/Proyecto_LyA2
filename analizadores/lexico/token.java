@@ -11,15 +11,6 @@ public class token {
     autNumeros AutNumeros;
     autBooleana AutBooleana;
     lexemas lex;
-    //String[] retorno;
-    /*String[] vocabulario = {"PRINCIPAL",
-                        "SI","SINO","MIENTRAS","HACER",
-                        "ENTERO","FLOTANTE","TEXTO",
-                        "OPARITMETICO","OPLOGICO",
-                        "OPCOMPARACION","OPASIGNACION",
-                        "BLOQUEAPERTURA","BLOQUECIERRE",
-                        "PARENTESISAPERTURA","PARENTESISCIERRE",
-                        "DELIMITADOR", "IDENTIFICADOR"};*/
 
     public String getToken(String lexema){
         if(lexema.equals("si"))

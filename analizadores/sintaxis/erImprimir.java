@@ -27,7 +27,6 @@ public class erImprimir {
 
     public void valiER(){
         String ultimo = lineas.trim().substring(lineas.trim().length()-1);
-        //System.out.println("ERIMPR "+ultimo);
         if(ultimo.equals(";")){
             try {
                 q0();
@@ -45,7 +44,6 @@ public class erImprimir {
         cadena = "";
         datos = lineas.trim().split("imprimir");
         for (int i = 1; i < datos.length; i++) {
-            //System.out.println("Datos ["+i+"]: "+datos[i]);
             contenido = datos[i].trim().split(";");
             q1();
         }
@@ -56,7 +54,6 @@ public class erImprimir {
 
     void q1(){
         for (int j = 0; j < contenido.length; j++) {
-            //System.out.println("    Contenido ["+j+"] -> "+contenido[j]);
             separado = contenido[j].trim().split("\\Q+\\E"); // Simbolo +
             q2();
         }
@@ -64,7 +61,6 @@ public class erImprimir {
 
     void q2(){
         for (int k = 0; k < separado.length; k++) {
-            //System.out.println("        Separado ["+k+"] -> "+separado[k]);
             token = separado[k];
             if(token.substring(0, 1).equals("\"")){
                 q3();

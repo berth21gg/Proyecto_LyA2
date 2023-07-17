@@ -35,13 +35,7 @@ public class clasificadorLinea {
             codigo[i] = codigo[i].trim();
             if(!codigo[i].equals("")){
                 String ultimo = codigo[i].substring(codigo[i].length()-1);
-                //System.out.println("Ultimo -> "+ultimo);
-                //System.out.println("Linea: "+codigo[i]);
                 String[] datos = valiString(codigo[i]);
-                /*for (String dato : datos) {
-                    System.out.println("    -> "+dato);
-                }*/
-                //System.out.println("===> "+datos[0]);
                 String token = t.getToken(datos[0]);
                 String vars[] = token.split(",");
                 if(datos[0].equals("principal") && ultimo.equals("{")){

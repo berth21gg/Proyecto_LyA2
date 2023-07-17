@@ -50,13 +50,8 @@ public class evaluar {
                     cadena += dato;
                 }
             }
-            //System.out.println("---> "+exp);
         }
         return exp;
-        /*String[] exp = expresion.split("[-/*+()]");
-        for (String e : exp) {
-            System.out.println("---> "+e);
-        }*/
     }
     
 }
