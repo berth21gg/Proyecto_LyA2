@@ -34,9 +34,6 @@ public class IntMain extends JFrame implements ActionListener { // Extension de 
     JTextArea ta2 = new JTextArea();
     DefaultTableModel modelT = new DefaultTableModel(); 
     JTable tabla = new JTable(modelT); 
-    //Creacion de submenus
-    JMenuItem menuItem11 = new JMenuItem("Abrir");
-    JMenuItem menuItem12 = new JMenuItem("Compilar");
     JPanel panel = new JPanel(); // Opciones de compilacion desde archivos
     tblSimbolo tablaSimbolos = new tblSimbolo();
     pilaError PilaError = new pilaError();
@@ -73,7 +70,7 @@ public class IntMain extends JFrame implements ActionListener { // Extension de 
         tf.setEditable(false);
         lines.setEditable(false);
         ta2.setEditable(false);
-        //abrirDoc(); // Abrir el archivo de ejemplo por default
+        // Abrir el archivo de ejemplo por default
         modelT.addColumn("Id");
         modelT.addColumn("No. Token");
         modelT.addColumn("Token");
@@ -85,9 +82,6 @@ public class IntMain extends JFrame implements ActionListener { // Extension de 
         frame.setExtendedState(JFrame.MAXIMIZED_BOTH); // Pantalla Completa
         frame.setSize(800, 500);
         frame.setLocationRelativeTo(null); // Pantalla centrada
-        // Agregacion de componentes a los menus
-        menuItem11.addActionListener(this);
-        menuItem12.addActionListener(this);
         // Creacion del Panel
         JLabel label = new JLabel("Seleccionar código fuente ");
         panel.add(label); // Components Added using Flow Layout
@@ -111,11 +105,9 @@ public class IntMain extends JFrame implements ActionListener { // Extension de 
         ta2.setBackground(Color.BLACK); // Fondo
         JScrollPane spr = new JScrollPane(ta2);
         spr.setMinimumSize(new DimensionUIResource(WIDTH, 300));// Scroll del editor
-        //spr.setBounds(10,50,400,300);
         add(spr);
         // Se agregan los componentes al Frame en la posicion adecuada
         frame.getContentPane().add(BorderLayout.NORTH, panel);
-        //frame.getContentPane().add(BorderLayout.NORTH, mb);
         frame.getContentPane().add(BorderLayout.CENTER, jsp);
         frame.getContentPane().add(BorderLayout.SOUTH, spr);
         frame.getContentPane().add(BorderLayout.WEST,new JScrollPane(tabla));
@@ -130,7 +122,7 @@ public class IntMain extends JFrame implements ActionListener { // Extension de 
         // Control de Eventos (clicks del usuario)
         Object click = e.getSource();
         // Interfaz de la ventana desplegable para seleccionar un archivo
-        if (click == buscar || click == menuItem11) {
+        if (click == buscar) {
             JFileChooser jfc = new JFileChooser(FileSystemView.getFileSystemView().getHomeDirectory());
             jfc.setDialogTitle("Seleccionar código fuente");
             jfc.setAcceptAllFileFilterUsed(false); // Limitar extensiones de los archivos
@@ -161,7 +153,7 @@ public class IntMain extends JFrame implements ActionListener { // Extension de 
             }
 
         // Boton de compilar
-        } else if(click == compilar || click == menuItem12){
+        } else if(click == compilar){
             this.PilaError = new pilaError();
             this.PilaBloques = new pilaBloques();
             this.tablaSimbolos = new tblSimbolo();
