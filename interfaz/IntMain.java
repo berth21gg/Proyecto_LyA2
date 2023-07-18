@@ -124,7 +124,7 @@ public class IntMain extends JFrame implements ActionListener { // Extension de 
         // Interfaz de la ventana desplegable para seleccionar un archivo
         if (click == buscar) {
             JFileChooser jfc = new JFileChooser(FileSystemView.getFileSystemView().getHomeDirectory());
-            jfc.setDialogTitle("Seleccionar código fuente");
+            jfc.setDialogTitle("Seleccionar archivo de código");
             jfc.setAcceptAllFileFilterUsed(false); // Limitar extensiones de los archivos
             FileNameExtensionFilter filter = new FileNameExtensionFilter("Texto plano", "txt", "e");
             jfc.addChoosableFileFilter(filter);
